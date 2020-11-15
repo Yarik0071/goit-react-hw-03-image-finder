@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-const overlay = document.querySelector(".Overlay")
-
+import PropTypes from "prop-types"
 class Modal extends Component {
 
   handleKeyDown = (e) => {
@@ -11,7 +10,6 @@ class Modal extends Component {
 
   componentDidMount() {
     window.addEventListener('keydown', this.handleKeyDown)
-    const overlay = document.querySelector(".Overlay")
   }
 
   componentWillUnmount() {
@@ -19,7 +17,7 @@ class Modal extends Component {
   }
 
   render() {
-console.log(overlay)
+
     return (
       <div className="Overlay">
         <div className="Modal">
@@ -28,6 +26,11 @@ console.log(overlay)
       </div>
     );
   }
+}
+
+Modal.proptype = {
+  img: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired
 }
 
 export default Modal;

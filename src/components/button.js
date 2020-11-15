@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from "prop-types"
 
 function Button({fetchImages}) {
     window.scrollTo({
@@ -13,6 +13,10 @@ function Button({fetchImages}) {
         onClick={fetchImages}
         >load more</button>
     )
+}
+
+Button.proptype = {
+fetchImages: PropTypes.func.isRequired
 }
 
 export default Button

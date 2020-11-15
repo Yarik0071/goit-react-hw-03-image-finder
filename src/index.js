@@ -95,7 +95,7 @@ const { images, error, loading, showModal, image } = this.state
        : <Button fetchImages={this.fetchImages}/>
       }
       {
-        showModal && <Modal img={image} onClose={this.onClose}/>
+        showModal && <div className="Modal"><Modal img={image} onClose={this.onClose}/></div>
       }
     </>
   );

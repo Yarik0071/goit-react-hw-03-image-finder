@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from "prop-types"
 
 function ImageGalleryItem({ images, takeItem }) {
 
@@ -20,6 +20,11 @@ function ImageGalleryItem({ images, takeItem }) {
           />
         </li>
     ));
+}
+
+ImageGalleryItem.proptype = {
+images: PropTypes.arrayOf(PropTypes.object.isRequired),
+takeItem: PropTypes.object.isRequired
 }
 
 export default ImageGalleryItem
